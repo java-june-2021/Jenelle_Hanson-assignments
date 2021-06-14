@@ -1,7 +1,7 @@
 import java.util.ArrayList;
-public class PuzzlingTest {
+public class PuzzleJavaTest {
     public static void main(String[] args){
-        Puzzling puzz = new Puzzling();
+        PuzzleJava puzz = new PuzzleJava();
         ArrayList<Integer> arr = new ArrayList<Integer>(0);
         arr.add(3);
         arr.add(5);
@@ -26,9 +26,18 @@ public class PuzzlingTest {
         System.out.println(puzz.task2(task2Arr));
         //End of Task 2
 
+
         System.out.println(puzz.task3());
-        // //End of task 3
+        //End of task 3
+
 
         System.out.println(puzz.task4());
+        //End of task 4
+
+        System.out.println(puzz.task5());
+
+        System.out.println(puzz.task6());
+
+        System.out.println(puzz.task7());
     }
 }
