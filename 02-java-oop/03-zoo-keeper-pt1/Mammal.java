@@ -1,5 +1,5 @@
 public class Mammal {
-        private int energyLevel = 100;
+        private int energyLevel;
 
         public int displayEnergy() {
             System.out.println(energyLevel);
@@ -12,7 +12,7 @@ public class Mammal {
     
         public void setEnergyLevel(int energyLevel) {
             if (energyLevel <= 0) {
-                System.out.println("Gorilla has no energy and fell asleep.");
+                System.out.println("This animal has no energy and fell asleep.");
                 return;
             }
             this.energyLevel = energyLevel;
