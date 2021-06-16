@@ -1,14 +1,16 @@
 public class ProjectTest {
     public static void main(String[] args) {
-        Project elevatorPitch = new Project();
+        Project cafe = new Project();
+        Portfolio portfolio1 = new Portfolio();
+        Portfolio portfolio2 = new Portfolio();
         Project elevatorPitch1 = new Project("User Interface");
         Project elevatorPitch2 = new Project("Personal", "Projects for Jobs");
         Project elevatorPitch3 = new Project("Personal", "Projects for Jobs", 1000.0);
 
 
-        System.out.println(elevatorPitch.getName());
-        System.out.println(elevatorPitch.getDescription());
-        System.out.println(elevatorPitch.getInitialCost());
+        System.out.println(cafe.getName());
+        System.out.println(cafe.getDescription());
+        System.out.println(cafe.getInitialCost());
         System.out.println("*****************");
 
         System.out.println(elevatorPitch1.getName());
@@ -26,6 +28,15 @@ public class ProjectTest {
         System.out.println(elevatorPitch3.getInitialCost());
         System.out.println("*****************");
 
+
+        portfolio1.setProjects(cafe);
+        portfolio1.setProjects(elevatorPitch1);
+        
+        portfolio2.setProjects(elevatorPitch2);
+        portfolio2.setProjects(elevatorPitch3);
+
+        System.out.println(portfolio1.getProjects());
+        System.out.println(portfolio2.getProjects());
 
         // System.out.println(elevatorPitch.elevatorPitch());
         System.out.println(elevatorPitch3.elevatorPitch());
