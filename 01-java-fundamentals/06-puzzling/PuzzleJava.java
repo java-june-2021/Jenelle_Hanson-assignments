@@ -90,11 +90,11 @@ public class PuzzleJava {
             Character randomCharacter = alphabet.get(r.nextInt(25));
             randChars.add(randomCharacter);
         }
-        //select a char and add it to a string??
         
         String randWord = new String();
 
-        randWord = randChars.get(0).toString() + randChars.get(1) + randChars.get(2) + randChars.get(3) + randChars.get(4);
+        randWord = randChars.get(0).toString() + randChars.get(1)
+        + randChars.get(2) + randChars.get(3) + randChars.get(4);
         
         return randWord;
     }
@@ -108,3 +108,14 @@ public class PuzzleJava {
         return createString;
     }
 }
+/* import java.util.StringBuilder 
+StringBuilder sb = new StringBuilder(); //String sb = "";
+for(int j = 0; j < 5; j++) {
+    sb.append(alphabet.get(r.nextInt(25)));
+}
+return sb;
+
+
+
+
+*/
