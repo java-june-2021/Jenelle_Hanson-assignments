@@ -1,8 +1,9 @@
 public class Humans {
-    private int health = 100;
-    private int strength = 3;
-    private int intelligence = 3;
-    private int stealth = 3;
+    protected String name = "";
+    protected int health = 100;
+    protected int strength = 3;
+    protected int intelligence = 3;
+    protected int stealth = 3;
 
     public void attack(Humans target){
         target.health -= this.strength;

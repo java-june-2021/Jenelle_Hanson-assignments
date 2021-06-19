@@ -1,22 +1,26 @@
 public class HumansTest {
     public static void main(String[] args) {
-        Humans h = new Humans();
-        Samurai s = new Samurai();
-        Ninja n = new Ninja();
-        Wizard w = new Wizard();
+        Samurai jack = new Samurai("Samurai Jack");
+        Ninja shinobi = new Ninja("Ninja Shinobi");
+        Wizard aku = new Wizard("Wizard Aku");
+        Wizard gandolf = new Wizard("Wizard Gandolf");
+        Ninja hinata = new Ninja("Ninja Hinata");
+        Samurai mugen = new Samurai("Samurai Mugen");
     
-        // h.displayHealth();
+        aku.heal(jack);
+        aku.fireball(jack);
+        jack.deathBlow(aku);
+        jack.meditate();
+        shinobi.steal(jack);
+        shinobi.runAway();
 
-        //humans actions
-        // n.displayHealth();
+        gandolf.fireball(hinata);
+        gandolf.heal(aku);
+        hinata.steal(mugen);
+        hinata.runAway();
+        jack.howMany();
+        mugen.deathBlow(aku);
+        mugen.meditate();
 
-        h.attack(n);
-        System.out.println("Ninja was attacked: " + n.displayHealth());
-
-        h.attack(s);
-        System.out.println("Samurai was attacked: " + s.displayHealth());
-
-        h.attack(w);
-        System.out.println("Wizard was attacked: " + w.displayHealth());
     }
 }

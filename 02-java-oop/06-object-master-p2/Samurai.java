@@ -1,23 +1,32 @@
 public class Samurai extends Humans {
-    Humans h = new Humans();
+    private int dHealth = 200;
+    private static int count = 0;
 
-    //health of ex.Ninja decreases by strength of wizard
-    
-    // public void samuraiAttacksWizard() {
-    //     System.out.println("Samurai attacked Wizard");
-    //     w.setHealth(w.getHealth() - this.getStrength()); 
-    //     System.out.println("Wizard's health is now: " + w.getHealth());
-    // }
+    public Samurai(String name) {
+        this.name = name;
+        this.health = dHealth;
+        count += 1;
+    }
 
-    // public void samuraiAttacksNinja() {
-    //     System.out.println("Samurai attacked Ninja");
-    //     n.setHealth(n.getHealth() - this.getStrength()); 
-    //     System.out.println("Ninja's health is now: " + n.getHealth());
-    // }
+    public void deathBlow(Humans target) {
+        target.health = 0;
+        this.health /= 2;
+        System.out.println(this.name + " dealt a death blow to " 
+        + target.name + ". " + target.name + "'s health is now: " 
+        + target.health + ". " + this.name + "'s health decreased to " + this.health);
+    }
 
-    // public void samuraiWasHit() {
-    //     System.out.println("Samurai was attacked");
-    //     this.setHealth(this.getHealth() - this.getStrength()); 
-    //     System.out.println(this.getHealth());
-    // }
+    public void meditate() {
+        this.health += this.health/2;
+        System.out.println(this.name + " meditated " 
+        + this.name + "'s health is now: " 
+        + this.health + ".");
+    }
+
+    public void howMany() {
+        System.out.println("Samurai on field: " + count);
+    }
+    /*
+Samurai: Add a method howMany() that returns the total current number of Samurai.
+ */
 }

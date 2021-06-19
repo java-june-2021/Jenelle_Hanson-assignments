@@ -1,24 +1,23 @@
 public class Ninja extends Humans {
-    Humans h = new Humans();
+    private int dStealth = 10;
 
-    //health of ex.Ninja decreases by strength of wizard
+    //method overload
+    public Ninja(String name) {
+        this.name = name;
+        this.stealth = dStealth;
+    }
     
-    // public void ninjaAttacksWizard() {
-    //     System.out.println("Ninja attacked Wizard");
-    //     w.setHealth(w.getHealth() - this.getStrength());
-    //     System.out.println("Wizard's health is now: " + w.getHealth());
-    // }
+    public void steal(Humans target) {
+        target.health -= this.stealth;
+        this.health += this.stealth;
+        System.out.println(this.name + " stole from " 
+        + target.name + ". " + target.name + "'s health is now: " 
+        + target.health + ". " + this.name + "'s health is now: " + this.health); 
+    }
 
-    // public void ninjaAttacksSamurai() {
-    //     System.out.println("Ninja attacked Samurai");
-    //     s.setHealth(s.getHealth() - this.getStrength());
-    //     System.out.println("Samurai's health is now: " + s.getHealth());
-    // }
-
-
-    // public void ninjaWasHit() {
-    //     System.out.println("Ninja was attacked");
-    //     this.setHealth(this.getHealth() - this.getStrength()); 
-    //     System.out.println(this.getHealth());
-    // }
+    public void runAway() {
+        this.health -= 10;
+        System.out.println(this.name + " ran away. " + this.name 
+        + "'s health is now: " + this.health);
+    }
 }
