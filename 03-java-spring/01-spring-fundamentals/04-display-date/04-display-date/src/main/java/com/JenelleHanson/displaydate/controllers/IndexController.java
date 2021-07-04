@@ -17,7 +17,6 @@ public class IndexController {
 	@RequestMapping("/date")
 	public String index1(Model model) {
 		Date date = new java.util.Date();
-		
 		model.addAttribute("date", date);
 		return "index1.jsp";
 	}

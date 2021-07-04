@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	
-	<groupId>com.JenelleHanson.04-display-date</groupId>
-	<artifactId>04-display-date</artifactId>
+	<groupId>com.JenelleHanson.05-counter</groupId>
+	<artifactId>05-counter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>04-display-date</name>
-	<description>Display two date formats</description>
+	<name>05-counter</name>
+	<description>Counting project</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -22,8 +22,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-		<dependency>
+		
+	    <dependency>
                 <groupId>org.apache.tomcat.embed</groupId>
                 <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
@@ -32,7 +32,7 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>jstl</artifactId>
         </dependency>
-
+        
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
