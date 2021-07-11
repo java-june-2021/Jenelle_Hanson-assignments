@@ -19,12 +19,14 @@
         </tr>
     </thead>
     <tbody>
-        <c:forEach items="${books}" var="book">
+        <c:forEach items="${books}" var="book" varStatus="loop">
         <tr>
             <td><a href="books/${book.id}"><c:out value="${book.title}"/></a></td>
             <td><c:out value="${book.description}"/></td>
             <td><c:out value="${book.language}"/></td>
             <td><c:out value="${book.numberOfPages}"/></td>
+            <td><a href="/books/edit/${book.id}">Edit</a></td>
+            <td><a href="/books/delete/${book.id}">Delete</a></td>
         </tr>
         </c:forEach>
     </tbody>

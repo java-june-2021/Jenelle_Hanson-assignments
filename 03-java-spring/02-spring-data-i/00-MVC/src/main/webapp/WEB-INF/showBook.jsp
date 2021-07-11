@@ -8,9 +8,9 @@
 <title>Books</title>
 </head>
 <body>
-<p><c:out value="${book.title}"/></p>
-<p><c:out value="${book.description}"/></p>
-<p><c:out value="${book.language}"/></p>
-<p><c:out value="${book.numberOfPages}"/></p>
+	<p><c:out value="${book.title}"/></p>
+	<p><c:out value="${book.description}"/></p>
+	<p><c:out value="${book.language}"/></p>
+	<p><c:out value="${book.numberOfPages}"/></p>
 </body>
 </html>

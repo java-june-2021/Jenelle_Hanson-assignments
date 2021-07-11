@@ -21,9 +21,6 @@ public class BookService {
 	    public List<Book> allBooks() {
 	        return bookRepository.findAll();
 	    }
-//	    public List<Book> allBooks() {
-//	        return books;
-//	    }   is this needed?
 	    
 	    // creates a book
 	    public Book createBook(Book b) {
@@ -37,23 +34,17 @@ public class BookService {
 	        } else {
 	            return null;
 	        }
+	        //public Event getEventById(Long id) {         return this.eRepo.findById(id).orElse(null);     }
 	    }
 	    
-	 // initialize the books variable with values
-	    private List<Book> books = new ArrayList(Arrays.asList(
-	            new Book("Harry Potter and the Sorcerer's Stone", "A boy wizard saving the world", "english", 309),
-	            new Book("The Great Gatsby", "The story primarily concerns the young and mysterious millionaire Jay Gatsby", "english", 180),
-	            new Book("Moby Dick", "The saga of Captain Ahab", "english", 544),
-	            new Book("Don Quixote", "Life of a retired country gentleman", "english", 150),
-	            new Book("The Odyssey", "Ancient Greek epic poem", "english", 475)
-	            ));
+	    //edits a book
+	    public Book updateBook(Book b) {
+	    	return bookRepository.save(b);
+	    }
 	    
-		public Book findBookByIndex(int index) {
-			if(index < books.size()) {
-				return books.get(index);
-			}else {
-				return null;
-			}
-			
-		}
+	    //destroys a book
+	    public void destroyBook(Long id) {
+	    	bookRepository.deleteById(id);
+	    }
+	    
 }
