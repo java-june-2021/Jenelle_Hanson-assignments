@@ -10,7 +10,7 @@
 <body>
 
 <h1>New Book</h1>
-<form:form action="/books" method="post" modelAttribute="book">
+<form:form action="/books/new" method="post" modelAttribute="book">
     <p>
         <form:label path="title">Title</form:label>
         <form:errors path="title"/>

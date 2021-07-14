@@ -34,7 +34,9 @@ public class BookService {
 	        } else {
 	            return null;
 	        }
-	        //public Event getEventById(Long id) {         return this.eRepo.findById(id).orElse(null);     }
+	        //public Event getEventById(Long id) {
+	        //return this.eRepo.findById(id).orElse(null);
+	        //} same thing to as method it is inside
 	    }
 	    
 	    //edits a book
