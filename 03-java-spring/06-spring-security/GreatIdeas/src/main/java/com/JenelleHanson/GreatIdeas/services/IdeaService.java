@@ -25,6 +25,10 @@ public class IdeaService {
 		return this.iRepo.save(idea);
 	}
 	
+	public Idea updateIdea(Idea idea) {
+		return this.iRepo.save(idea);
+	}
+	
 	public void deleteIdea(Long id) {
 		this.iRepo.deleteById(id);
 	}

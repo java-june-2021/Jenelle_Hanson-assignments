@@ -18,7 +18,7 @@
 			<form:input path="iText"/><!--This will connect to the model page name variable-->
 		</p>
 		
-		<form:input type="hidden" path="user" value="${user.id}"/>
+		<form:input type="hidden" path="user" value="${user__id}"/><!-- This connects to idea Controller in the post mapping for /new. the session that gets the user needs to match the variable name -->
 		<button>Create</button>
 		</form:form>
 	</body>
